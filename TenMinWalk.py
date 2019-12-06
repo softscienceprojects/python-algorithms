@@ -11,12 +11,18 @@ an empty array (that's not a walk, that's standing still!).
 """
 
 
-def high_and_low(numbers):
-    numbers = numbers.split()
-    arr = []
-    for number in numbers:
-        number = int(number)
-        arr.append(number)
-    max_and_min = sorted(arr, reverse=True)
-    max_and_min = str(max_and_min[0])+" "+str(max_and_min[len(max_and_min)-1])
-    return max_and_min
+def isValidWalk(walk):
+    if len(walk) != 10:
+        return False
+    else:
+        if walk.count('e') == walk.count('w') and walk.count('n') == walk.count('s'):
+            return True
+        else:
+            return False
+    
+    #need an even number of n/s e/w back to start
+    #takes exactly 10 minutes to walk
+    
+    # should return false if value does not bring you back to start
+    # ['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 'n']
+    # ['e', 'e', 'e', 'w', 'n', 's', 'n', 's', 'e', 'w']
