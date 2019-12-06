@@ -1,2 +1,2 @@
 # python-algorithms
-Algorithms for practicing python
+My solutions for practicing python (from Codecademy and Codewars)
